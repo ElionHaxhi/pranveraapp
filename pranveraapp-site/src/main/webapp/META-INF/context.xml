@@ -21,7 +21,7 @@
               minEvictableIdleTimeMillis="30000"
               jdbcInterceptors="org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer"
               username="root"
-              password="sj9gvcsesgh"
+              password="forzamilan"
               driverClassName="com.mysql.jdbc.Driver"
               url="jdbc:mysql://localhost:3306/pranvera_app?useUnicode=true&amp;characterEncoding=utf8"/>
 
