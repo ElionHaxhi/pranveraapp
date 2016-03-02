@@ -1,0 +1,16 @@
+<nav>
+	<ul class="nav navbar-nav nav-stacked">
+		<li><a  th:href="@{/}" href="/" th:utext="#{nav.home}">Home</a></li>
+		<li><a  th:href="@{/work/}" th:utext="#{nav.work}">Work</a></li>
+		<li><a  th:href="@{/services/}" th:utext="#{nav.services}">Services</a></li>
+		<li><a  th:href="@{/news/}" th:utext="#{nav.blog}">News</a></li>
+		<li><a  th:href="@{/contact/}" th:utext="#{nav.contact}">Contact</a></li>
+		<li><a href="index.html" th:utext="#{nav.language}">Language<span class="angle"></span></a>
+		    <ul>
+			<li><a href="?elLocaleCode=al_AL" th:utext="#{nav.lang.albanian}"></a></li>
+			<li><a href="?elLocaleCode=it_IT" th:utext="#{nav.lang.italy}"></a></li>
+			<!--<li><a href="?lang=en_US" th:utext="#{nav.lang.english}"></a></li>-->
+		    </ul>
+		</li>
+	</ul>
+</nav>

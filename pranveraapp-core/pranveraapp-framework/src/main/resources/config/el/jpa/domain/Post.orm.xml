@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_2_0.xsd" version="2.0">
+
+    <named-query name="EL_READ_ALL_POSTS" >
+        <query>SELECT post FROM com.pranveraapp.core.post.domain.Post post</query>
+    </named-query>
+
+    <named-query name="EL_READ_ACTIVE_POSTS_BY_CATEGORY">
+        <query>
+            SELECT post FROM com.pranveraapp.core.post.domain.Post post
+            WHERE post.category.id = :categoryId
+        </query>
+    </named-query>
+    <named-query name="EL_READ_POSTS_BY_OUTGOING_URL">
+        <query>SELECT post
+               FROM com.pranveraapp.core.post.domain.Post post
+               WHERE (post.url = :url)
+        </query>
+    </named-query>
+</entity-mappings>
