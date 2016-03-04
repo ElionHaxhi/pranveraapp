@@ -2,19 +2,19 @@
 
 ####Basic Features
 
-* It is a real webapplication
+* It is a real webapp
 * All in java spring and hibernate
-* The architecture is baset on maven
+* The architecture is buid with maven
 
 
 #####pranveraapp-common
 * Here you can find all the utility file 
-* Also we can find some persistence implementation for the maintance of the language dynamicaly
+* Also we can find some persistence implementation for the maintenance of the language dynamicaly
 
 #####pranveraapp-core
 * Contains two module
-* The modul one implement all the entities dao and service of the app
-* The module two implements the controllers of these application
+* The module one implement all the entities dao and service of the app
+* The module two implements the controllers
 * We can call these the classic middle tire
 
 #####pranveraapp-site
