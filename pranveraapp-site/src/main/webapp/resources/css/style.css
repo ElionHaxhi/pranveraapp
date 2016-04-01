@@ -16098,8 +16098,8 @@ styled buttons not container for vertical centered navs*/
 	/**width: 100%;*/
 	position: relative;
 	min-height: 1px;
-	padding-right: 15px;
-	padding-left: 15px
+	/*padding-right: 15px;
+	padding-left: 15px*/
 }
 
 
