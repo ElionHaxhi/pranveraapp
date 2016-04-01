@@ -4,6 +4,7 @@ pranveraapp.iml
 .settings/
 pranveraapp-common/pranveraapp-common.iml
 pranveraapp-common/target/
+pranveraapp-common/.classpath
 
 pranveraapp-core/pranveraapp-core.iml
 
@@ -28,6 +29,7 @@ pranveraapp-core/.settings/
 
 pranveraapp-profile/pranveraapp-profile.iml
 pranveraapp-profile/target/
+pranveraapp-profile/.classpath
 
 pranveraapp-site/pranveraapp-site.iml
 pranveraapp-site/target/
