@@ -11,7 +11,7 @@ public class ContactForm {
 	private static final String NOT_BLANK_NAME_MESSAGE = "{notBlank.name.message}";
 	private static final String EMAIL_MESSAGE = "{email.message}";
 
-	//@NotBlank(message = ContactForm.NOT_BLANK_NAME_MESSAGE)
+	@NotBlank(message = ContactForm.NOT_BLANK_NAME_MESSAGE)
 	private String name;
 
 	@NotBlank(message = ContactForm.NOT_BLANK_MESSAGE)
