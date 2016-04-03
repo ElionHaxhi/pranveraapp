@@ -118,5 +118,36 @@
         <servlet-name>DispatcherServlet</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
+    
+     <servlet>
+    	<servlet-name>RESTApiServlet</servlet-name>
+    	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextClass</param-name>
+            <param-value>
+                org.springframework.web.context.support.AnnotationConfigWebApplicationContext
+            </param-value>
+        </init-param>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>
+                com.pranveraapp.site.api.RestApiMvcConfiguration
+            </param-value>
+        </init-param>
+         <init-param>
+            <param-name>throwExceptionIfNoHandlerFound</param-name>
+            <param-value>true</param-value>
+        </init-param> 
+        <load-on-startup>1</load-on-startup>
+	</servlet>
+   
+	<servlet-mapping>
+    	<servlet-name>RESTApiServlet</servlet-name>
+    	<url-pattern>/api/v1/*</url-pattern>
+	</servlet-mapping>
+    
+    
+    
+    
 
 </web-app>
