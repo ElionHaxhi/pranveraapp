@@ -10,6 +10,7 @@
 
 	<!-- <mvc:annotation-driven /> -->
 	<context:component-scan base-package="com.pranveraapp.common.web"/>
+	<context:component-scan base-package="com.pranveraapp.site.api" />
 
 	<mvc:annotation-driven validator="validator" />
 

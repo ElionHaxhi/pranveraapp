@@ -11,7 +11,7 @@
  <dependencies>
 		<dependency>
 			<groupId>com.pranveraapp.common</groupId>
-			<artifactId>pranveraapp-kommon</artifactId>
+			<artifactId>pranveraapp-common</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
 		

@@ -12,11 +12,11 @@
     <name>PranveraApp Site</name>
     <description>Qui ci sara la parte client del progetto</description>
     <dependencies>
-       <!-- <dependency>
+        <dependency>
             <groupId>com.pranveraapp.common</groupId>
             <artifactId>pranveraapp-common</artifactId>
             <version>1.0.0-SNAPSHOT</version>
-        </dependency>-->
+        </dependency>
         <dependency>
             <groupId>com.pranveraapp.core</groupId>
             <artifactId>pranveraapp-framework</artifactId>

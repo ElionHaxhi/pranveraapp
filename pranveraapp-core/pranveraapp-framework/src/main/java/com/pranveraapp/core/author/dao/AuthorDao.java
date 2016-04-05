@@ -16,6 +16,8 @@ public interface AuthorDao {
 
     public Author readAuthorByURI(String uri);
 
+    public Author readAuthorById(Long id);
+
     public List<Post> readFilteredActivePostsByAuthor(Long authorId, SearchCriteria searchCriteria);
 
     public Integer readTotalResultsPostsByAuthor(Long authorId);

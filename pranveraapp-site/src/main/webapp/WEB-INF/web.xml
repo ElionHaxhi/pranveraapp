@@ -14,9 +14,12 @@
         <param-name>patchConfigLocation</param-name>
         <param-value>
             classpath:/el-framework-applicationContext-persistence.xml
+            classpath:/el-framework-web-applicationContext-api-wrapper.xml
             classpath:/el-common-applicationContext-persistence.xml
             classpath:/el-framework-web-applicationContext.xml
             /WEB-INF/applicationContext-datasource.xml
+            /WEB-INF/applicationContext-servlet-rest-api.xml
+
             /WEB-INF/applicationContext-security.xml
             /WEB-INF/applicationContext-filter.xml
         </param-value>
@@ -119,15 +122,16 @@
         <url-pattern>/</url-pattern>
     </servlet-mapping>
     
-     <servlet>
+      <servlet>
     	<servlet-name>RESTApiServlet</servlet-name>
     	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <init-param>
-            <param-name>contextClass</param-name>
-            <param-value>
-                org.springframework.web.context.support.AnnotationConfigWebApplicationContext
-            </param-value>
-        </init-param>
+                   <param-name>contextClass</param-name>
+                        <param-value>
+                             org.springframework.web.context.support.AnnotationConfigWebApplicationContext
+                        </param-value>
+              </init-param>
+        
         <init-param>
             <param-name>contextConfigLocation</param-name>
             <param-value>
@@ -145,6 +149,7 @@
     	<servlet-name>RESTApiServlet</servlet-name>
     	<url-pattern>/api/v1/*</url-pattern>
 	</servlet-mapping>
+
     
     
     

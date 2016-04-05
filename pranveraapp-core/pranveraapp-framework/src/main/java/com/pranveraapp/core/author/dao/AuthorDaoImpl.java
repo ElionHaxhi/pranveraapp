@@ -61,6 +61,23 @@ public class AuthorDaoImpl implements AuthorDao {
     }
 
     @Override
+    public Author readAuthorById(Long id){
+
+        Query query;
+        query = em.createNamedQuery("EL_READ_AUTHOR_BY_ID");
+        query.setParameter("id", id);
+
+
+        List<Author> authors=query.getResultList();
+        if(authors !=null && !authors.isEmpty()){
+         return authors.get(0);
+        }
+        else {
+            return null;
+        }
+    }
+
+    @Override
     public List<Post> readFilteredActivePostsByAuthor(Long authorId,SearchCriteria searchCriteria){
         Query query;
         query = em.createNamedQuery("EL_READ_POSTS_BY_AUTHORID");

@@ -51,7 +51,7 @@ public class WebConfiguration extends WebMvcConfigurerAdapter {
 	
 	 @Override
 	    public void addViewControllers(ViewControllerRegistry registry) {
-	        try {
+	        /*try {
 	            for (StaticPagePathFinder.PagePaths paths : staticPagePathFinder.findPaths()) {
 	                String urlPath = paths.getUrlPath();
 	                registry.addViewController(urlPath).setViewName("pages" + paths.getFilePath());
@@ -62,8 +62,9 @@ public class WebConfiguration extends WebMvcConfigurerAdapter {
 
 	        } catch (IOException e) {
 	            throw new RuntimeException("Unable to locate static pages: " + e.getMessage(), e);
-	        }
+	        }*/
 	    }
+
 	 
 	 
 	 

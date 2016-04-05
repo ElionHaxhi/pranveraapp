@@ -26,6 +26,10 @@ public class AuthorServiceImpl implements AuthorService {
         return authorDao.readAuthorByURI(uri);
     }
 
+    public Author findAuthorById(Long id){
+        return authorDao.readAuthorById(id);
+    }
+
     public List<Post> findFilteredActivePostsByAuthor(Long authorId,SearchCriteria searchCriteria){
         return authorDao.readFilteredActivePostsByAuthor(authorId,searchCriteria);
     }

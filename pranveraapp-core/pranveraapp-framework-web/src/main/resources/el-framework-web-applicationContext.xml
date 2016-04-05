@@ -12,4 +12,5 @@
 
 	 <bean id="elUrlRewriteProcessor" class="com.pranveraapp.core.web.processor.UrlRewriteProcessor"></bean>
 	<bean id="elHrefUrlRewriteProcessor" class="com.pranveraapp.core.web.processor.HrefUrlRewriteProcessor"></bean>
+	 <bean id="elWrapperOverrideTypeModifier" class="com.pranveraapp.core.web.api.WrapperOverrideTypeModifier"></bean> 
 </beans>

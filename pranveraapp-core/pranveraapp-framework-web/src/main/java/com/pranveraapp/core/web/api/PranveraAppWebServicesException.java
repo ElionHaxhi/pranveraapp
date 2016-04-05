@@ -39,5 +39,13 @@ public class PranveraAppWebServicesException extends RuntimeException {
         }
         return this.messages;
     }
+
+	public PranveraAppWebServicesException addMessage(String key, Object param) {
+        if (param != null) {
+            return addMessage(key, new Object[] { param });
+        } else {
+            return addMessage(key, new Object[0]);
+        }
+    }
 	
 }

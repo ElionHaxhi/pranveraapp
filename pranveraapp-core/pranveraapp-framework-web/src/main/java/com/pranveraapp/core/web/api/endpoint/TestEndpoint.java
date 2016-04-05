@@ -28,8 +28,8 @@ public abstract class TestEndpoint extends BaseEndPoint {
 	protected AuthorService authorService;
 	
 	
-	public AuthorWrapper findAuthorByUri(HttpServletRequest request, String uri){
-		Author author = authorService.findAuthorByURI(uri);
+	public AuthorWrapper findAuthorById(HttpServletRequest request, Long id){
+		Author author = authorService.findAuthorById(id);
 		if(author != null){
 			AuthorWrapper wrapper;
 			wrapper = (AuthorWrapper) context.getBean(AuthorWrapper.class.getName());
@@ -37,6 +37,6 @@ public abstract class TestEndpoint extends BaseEndPoint {
 			return wrapper;
 		}
 		throw PranveraAppWebServicesException.build(HttpStatus.NOT_FOUND.value())
-			.addMessage(PranveraAppWebServicesException.AUTHOR_NOT_FOUND, uri);
+			.addMessage(PranveraAppWebServicesException.AUTHOR_NOT_FOUND, id);
 	}
 }

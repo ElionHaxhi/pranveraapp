@@ -15,6 +15,8 @@ public interface AuthorService {
 
     public Author findAuthorByURI(String uri);
 
+    public Author findAuthorById(Long id);
+
     public List<Post> findFilteredActivePostsByAuthor(Long authorId,SearchCriteria searchCriteria);
 
     public Integer findTotalResultsPostsByAuthor(Long authorId);

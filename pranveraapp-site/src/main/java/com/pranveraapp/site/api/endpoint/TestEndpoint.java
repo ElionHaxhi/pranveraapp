@@ -23,10 +23,10 @@ import com.pranveraapp.core.web.api.wrapper.AuthorWrapper;
 public class TestEndpoint extends com.pranveraapp.core.web.api.endpoint.TestEndpoint {
 
 	@Override
-	@RequestMapping(value = "author/{uri}", method = RequestMethod.GET)
-	public AuthorWrapper findAuthorByUri(HttpServletRequest request, @PathVariable("uri") String uri){
-		
-		return super.findAuthorByUri(request, uri);
+	@RequestMapping(value = "author/{id}", method = RequestMethod.GET)
+	public AuthorWrapper findAuthorById(HttpServletRequest request, @PathVariable("id") Long id){
+
+		return super.findAuthorById(request, id);
 		
 	}
 	
