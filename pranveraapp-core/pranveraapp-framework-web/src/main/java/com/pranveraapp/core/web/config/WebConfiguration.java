@@ -1,6 +1,8 @@
 package com.pranveraapp.core.web.config;
 
 import java.io.IOException;
+import java.security.KeyManagementException;
+import java.security.NoSuchAlgorithmException;
 import java.util.Properties;
 
 import javax.servlet.http.HttpServletRequest;
@@ -25,6 +27,7 @@ import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 import org.springframework.web.util.UrlPathHelper;
 
 import com.pranveraapp.common.support.StaticPagePathFinder;
+import com.pranveraapp.common.util.SSLUtil;
 
 @Configuration
 @ControllerAdvice
@@ -85,8 +88,11 @@ public class WebConfiguration extends WebMvcConfigurerAdapter {
 	
 
 	@Bean
-    public JavaMailSenderImpl mailSender() {
+    public JavaMailSenderImpl mailSender() throws KeyManagementException, NoSuchAlgorithmException {
         JavaMailSenderImpl javaMailSender = new JavaMailSenderImpl();
+        
+        //here this line is for disable the SSHandshakeException
+        SSLUtil.turnOffSslChecking();
 
         javaMailSender.setHost("localhost");
         javaMailSender.setPort(25);
