@@ -1,0 +1,14 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
+
+       <bean id="com.pranveraapp.core.author.domain.Author" class="com.pranveraapp.core.author.domain.AuthorImpl" scope="prototype"/>
+       <bean id="com.pranveraapp.core.category.domain.Category" class="com.pranveraapp.core.category.domain.CategoryImpl" scope="prototype"/>
+       <bean id="com.pranveraapp.core.post.domain.Post" class="com.pranveraapp.core.post.domain.PostImpl" scope="prototype"/>
+       <bean id="com.pranveraapp.core.posttagxref.domain.PostTagXref" class="com.pranveraapp.core.posttagxref.domain.PostTagXrefImpl" scope="prototype"/>
+       <bean id="com.pranveraapp.core.tag.domain.Tag" class="com.pranveraapp.core.tag.domain.TagImpl" scope="prototype"/>
+       <bean id="com.pranveraapp.core.lokale.domain.Lokale" class="com.pranveraapp.core.lokale.domain.LokaleImpl" scope="prototype"/>
+       <bean id="com.pranveraapp.core.timatoread.domain.TimeToRead" class="com.pranveraapp.core.timetoread.domain.TimeToReadImpl" scope="prototype"/>
+
+
+</beans>
