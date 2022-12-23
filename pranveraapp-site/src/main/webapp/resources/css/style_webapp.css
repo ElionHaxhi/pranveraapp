@@ -1,7 +1,0 @@
-/*
- * VARIE
- */
-a, a:hover, a:focus, a:active, .btn, .btn:focus, .btn:active { outline: none; outline: 0; text-decoration: none; }
-body {font-family: 'Varela Round', sans-serif;}
-textarea{resize: vertical;}
-
