@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title layout:title-pattern="$DECORATOR_TITLE - $CONTENT_TITLE">Pranvera - App</title>
+    <th:block th:replace="/layout/partials/head"></th:block>
+</head>
+<body>
+      <div id="wrapper">
+	  <aside class="side-menu navbar-inverse left">
+	   <div class="side-menu-wrapper">
+	  
+	   <div class="header-search-form">
+	      <a class="pull-left" >
+	      <img src="../../resources/images/singlepapp.png" th:src="@{/resources/images/singlepapp.png}"/></a>
+	      <span class="header-logo">PranveraApp</span>
+	   </div>
+	     <nav th:substituteby="/layout/partials/nav"></nav>	
+	  </div>
+	  </aside>
+	  <!-- end .side-menu -->
+
+	  <div id="main-content">
+    	    <header th:substituteby="/layout/partials/header"></header>
+    	    
+    	    
+    	    
+    	    <div id="content" role="main" class="no-padding">
+    	    <div id="revslider-container">
+		        <div id="revslider">
+			    <ul>
+				<li data-transition="fade" data-slotamount="8"
+				data-masterspeed="800" data-title=""
+				data-thumb="/resources/images/homesliders/index7/slide2.jpg">
+			           <img src="../../resources/images/revslider/dummy.png"
+				   th:src="@{/resources/images/revslider/dummy.png}" alt="slidebg1"
+				   data-lazyload="/resources/images/homesliders/index7/slide2.jpg"
+				   data-bgposition="center center" data-bgfit="cover"
+				   data-bgrepeat="no-repeat" />
+
+				   <div class="tp-caption rev-subtitle lfb ltt" data-x="0"
+				   data-y="160" data-speed="1000" data-start="900"
+				   data-easing="Power3.easeInOut" data-endspeed="400"
+				   style="z-index: 10" th:utext="#{pvprofront.rev.subtitle.first}"></div>
+
+				   <div class="tp-caption rev-title lfb ltt" data-x="0"
+				   data-y="210" data-speed="1000" data-start="1000"
+				   data-easing="Power3.easeInOut" data-endspeed="600"
+				   style="z-index: 6" th:utext="#{pvprofront.rev.title.first}"></div>
+				   
+				    <div class="tp-caption rev-title lfb ltt" data-x="0"
+				   data-y="275" data-speed="1000" data-start="1000"
+				   data-easing="Power3.easeInOut" data-endspeed="600"
+				   style="z-index: 6" th:utext="#{pvprofront.rev.title.first.secondpart}"></div>
+
+     		                   <div class="tp-caption rev-text lfb ltt" data-x="0" data-y="335"
+				   data-speed="1000" data-start="1200"
+				   data-easing="Power3.easeInOut" data-endspeed="700"
+		                   style="z-index: 12" th:utext="#{pvprofront.rev.text.first}"></div>
+
+				   
+				</li>
+				
+				<li data-transition="fade" data-slotamount="8"
+				data-masterspeed="800" data-title=""
+				data-thumb="/resources/images/homesliders/index7/slide2.jpg">
+				<!-- background image --> <img
+				src="../../resources/images/revslider/dummy.png"
+				th:src="@{/resources/images/revslider/dummy.png}" alt="slidebg1"
+				data-lazyload="/resources/images/homesliders/index7/slide2.jpg"
+				data-bgposition="center center" data-bgfit="cover"
+				data-bgrepeat="no-repeat" />
+
+				<div class="tp-caption rev-subtitle lfl ltl" data-x="0"
+				data-y="160" data-speed="1000" data-start="900"
+				data-easing="Power3.easeInOut" data-endspeed="400"
+				style="z-index: 10" th:utext="#{pvprofront.rev.subtitle.second}"></div>
+
+				<div class="tp-caption rev-title lfr ltr" data-x="0"
+				data-y="210" data-speed="1000" data-start="1000"
+				data-easing="Power3.easeInOut" data-endspeed="600"
+				style="z-index: 6" th:utext="#{pvprofront.rev.title.second}"></div>
+
+				<div class="tp-caption rev-text lfb ltt" data-x="0" data-y="285"
+				data-speed="1000" data-start="1200"
+				data-easing="Power3.easeInOut" data-endspeed="700"
+				style="z-index: 12" th:utext="#{pvprofront.rev.text.second}"></div>
+
+				
+				</li>
+			   </ul>
+			</div>
+			</div>
+			<div class="mb50"></div>
+			<!-- End #revslider -->
+    	    
+    	    
+    	    
+    	    
+    	    
+    	    
+    	    
+    	    
+    	    
+		      
+	          <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+
+                        <div id="project-gallery" class="portfolio-media carousel slide" data-ride="carousel" data-interval="7000">
+
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#project-gallery" data-slide-to="0" class="active"></li>
+                            <li data-target="#project-gallery" data-slide-to="1"></li>
+                            <li data-target="#project-gallery" data-slide-to="2"></li>
+                        </ol>
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img src="../../resources/images/portfolio/pvproproject1.JPG"
+                                    th:src="@{/resources/images/portfolio/pvproproject1.JPG}" alt="Sinle Project"/>
+                                </div><!-- End .item -->
+
+                                <div class="item">
+                                    <img src="../../resources/images/portfolio/pvproproject3.JPG" 
+                                    th:src="@{/resources/images/portfolio/pvproproject3.JPG}" alt="Sinle Project"/>
+                                </div><!-- End .item -->
+
+                                <div class="item">
+                                    <img src="../../resources/images/portfolio/pvproproject2.JPG" 
+                                    th:src="@{/resources/images/portfolio/pvproproject2.JPG}" alt="Sinle Project"/>
+                                </div><!-- End .item -->
+                            </div><!-- End .carousel-inner -->
+
+                            <!-- Controls -->
+                            <a class="left carousel-control" href="#project-gallery" role="button" data-slide="prev"><i class="fa fa-angle-left"></i></a>
+                            <a class="right carousel-control" href="#project-gallery" role="button" data-slide="next"><i class="fa fa-angle-right"></i></a>
+                        </div><!-- End .carousel -->
+                    </div><!-- End .col-md-7 -->
+
+                    <div class="col-md-5">
+
+                        <div class="portfolio-details">
+                            <h2 class="title-underblock custom" th:utext="#{pvprofront.title}"></h2>
+                            <p th:utext="#{pvprofront.subtext1}"></p>
+                            <p th:utext="#{pvprofront.subtext2}"></p>
+                            <ul class="portfolio-details-list">
+                                <li><span th:utext="#{pvprofront.author}">Author:</span> <a th:utext="#{pvprofront.name}">Eon Dean</a></li>
+                                <li><span th:utext="#{pvprofront.publishat}">Published at:</span><a th:utext="#{pvprofront.date}"></a></li>
+                                <li><span th:utext="#{pvprofront.category}">Category:</span><a th:utext="#{pvprofront.webapp}">Illustration</a></li>
+                                <li><span th:utext="#{pvprofront.site}">Designed for:</span><a href="http://primaverapizza.it">La Pizzeria Primavera</a></li>
+                                <li class="share-li">
+                                    <span th:utext="#{pvprofront.share}">Share Now:</span> 
+                                    <div class="social-icons">
+                                        <a onClick="facebookSh()" class="social-icon icon-facebook add-tooltip" data-placement="top" title="Facebook">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                        <a onClick="twitterSh()" class="social-icon icon-twitter add-tooltip" data-placement="top" title="Twitter">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                        <a onClick="googleSh()" class="social-icon icon-google-plus add-tooltip" data-placement="top" title="Google Plus">
+                                            <i class="fa fa-google-plus"></i>
+                                        </a>
+                                        <a onClick="linkedinSh()" class="social-icon icon-linkedin add-tooltip" data-placement="top" title="Linkedin">
+                                            <i class="fa fa-linkedin"></i>
+                                        </a>
+                                    </div><!-- End .social-icons -->
+                                </li>
+                            </ul>
+                        </div><!-- End .portfolio-details -->
+                        
+                    </div><!-- End .col-md-5 -->
+
+                </div><!-- End .row -->
+            </div><!-- End .container -->
+	      
+	      
+	      
+	      
+	      
+	      
+	      
+	      <footer th:substituteby="/layout/partials/footer"></footer>	      
+	      </div><!-- End of content  -->
+	   </div><!-- End #main-content -->
+	   <div class="boss-menu-overlay"></div>
+	</div>
+	<!-- End #wrapper -->
+	<a href="#top" id="scroll-top" title="Back to Top"><i class="fa fa-angle-up"></i></a>
+	<!-- END -->
+	<script src="../../resources/js/smoothscroll.js"
+		th:src="@{/resources/js/smoothscroll.js}"></script>
+	<script src="../../resources/js/bootstrap.min.js"
+		th:src="@{/resources/js/bootstrap.min.js}"></script>
+	<script src="../../resources/js/jquery.hoverIntent.min.js"
+		th:src="@{/resources/js/jquery.hoverIntent.min.js}"></script>
+	<script src="../../resources/js/jquery.nicescroll.min.js"
+		th:src="@{/resources/js/jquery.nicescroll.min.js}"></script>
+	<script src="../../resources/js/waypoints.min.js"
+		th:src="@{/resources/js/waypoints.min.js}"></script>
+	<script src="../../resources/js/waypoints-sticky.min.js"
+		th:src="@{/resources/js/waypoints-sticky.min.js}"></script>
+	<script src="../../resources/js/jquery.debouncedresize.js"
+		th:src="@{/resources/js/jquery.debouncedresize.js}"></script>
+	<script src="../../resources/js/retina.min.js"
+		th:src="@{/resources/js/retina.min.js}"></script>
+	<script src="../../resources/js/owl.carousel.min.js"
+		th:src="@{/resources/js/owl.carousel.min.js}"></script>
+	<script src="../../resources/js/skrollr.min.js"
+		th:src="@{/resources/js/skrollr.min.js}"></script>
+	<script src="../../resources/js/jquery.countTo.js"
+		th:src="@{/resources/js/jquery.countTo.js}"></script>
+	<script src="../../resources/js/isotope.pkgd.min.js"
+		th:src="@{/resources/js/isotope.pkgd.min.js}"></script>
+	<script src="../../resources/js/jquery.magnific-popup.min.js"
+		th:src="@{/resources/js/jquery.magnific-popup.min.js}"></script>
+	<script src="../../resources/js/jquery.themepunch.tools.min.js"
+		th:src="@{/resources/js/jquery.themepunch.tools.min.js}"></script>
+	<script src="../../resources/js/jquery.themepunch.revolution.min.js"
+		th:src="@{/resources/js/jquery.themepunch.revolution.min.js}"></script>
+	<script src="../../resources/js/wow.min.js"
+		th:src="@{/resources/js/wow.min.js}"></script>
+	<script src="../../resources/js/jquery.validate.min.js"
+		th:src="@{/resources/js/jquery.validate.min.js}"></script>
+	<script src="../../resources/js/main.js"
+		th:src="@{/resources/js/main.js}"></script>
+
+	<script src="../../resources/js/custom-social431.js" th:src="@{/resources/js/custom-social431.js}"></script>
+	<script>
+		(function() {
+			"use strict";
+			// Slider Revolution
+			jQuery('#revslider').revolution({
+				delay : 8000,
+				startwidth : 1170,
+				startheight : 500,
+				fullWidth : "on",
+				fullScreen : "on",
+				hideTimerBar : "off",
+				spinner : "spinner4",
+				navigationStyle : "preview4",
+				soloArrowLeftHOffset : 20,
+				soloArrowRightHOffset : 20
+			});
+		}());
+	</script>
+ <!-- elion my tracking google analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+       })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-82082423-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+</body>
+</html>

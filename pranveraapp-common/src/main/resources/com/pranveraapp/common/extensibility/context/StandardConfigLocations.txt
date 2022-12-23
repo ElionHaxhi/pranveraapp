@@ -1,0 +1,15 @@
+#specify fully qualified resource path. e.g.: /com/pranveraapp/profile/extensibility/applicationContext.xml
+#separate each entry with a new line
+#comments may be added by placing a pound symbol '#' in front of the line
+el-common-applicationContext-persistence.xml
+el-profile-applicationContext-persistence.xml
+#persistence xml files should appear first to ensure that entity managers are loaded first
+el-common-applicationContext.xml
+el-profile-applicationContext.xml
+#The application context files below are not added by default to the PA runtime
+#Instead, these items must be explicitly declared for import in web.xml, if desired
+#testing application context files
+
+#el-framework-applicationContext-test.xml
+#el-applicationContext-test.xml
+#el-applicationContext-test-security.xml
