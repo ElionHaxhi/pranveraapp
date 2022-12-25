@@ -1,0 +1,61 @@
+<footer id="footer" class="footer-inverse" role="contentinfo">
+ <div id="footer-inner">
+  <div class="container">
+   <div class="row">
+    <div class="col-md-4 col-md-push-4 col-sm-6 col-sm-push-3 col-xs-10 col-xs-push-1">
+     <div class="widget">
+      <div class="corporate-widget text-center">
+       <span class="footer-logo">PranveraApp</span><!-- End .footer-logo -->
+        <p th:utext="#{footer.text}"></p>
+          <address>
+            Visit us: <a href="http://www.pranveraapp.com">PranveraApp.com</a><br/>
+            Email: <a href="mailto:info@pranveraapp.com">info@pranveraapp.com</a><br/>
+            Box 16100, Genoa - Italy<br></br>
+            <abbr title="Web Site and Web App">PranveraApp</abbr> &copy; 2021
+          </address>
+          <span class="social-icons-label" th:text="#{footer.social.text}"></span>
+          <div class="social-icons no-margin text-center">
+           <a href="https://www.facebook.com/PranveraApp" class="social-icon icon-facebook" title="Facebook">
+            <i class="fa fa-facebook"></i>
+           </a>
+           <a href="https://twitter.com/PranveraApp" class="social-icon icon-twitter" title="Twitter">
+            <i class="fa fa-twitter"></i>
+           </a>
+           <a href="https://plus.google.com/u/1/114807868342730830022" class="social-icon icon-google-plus" title="Google Plus">
+            <i class="fa fa-google-plus"></i>
+           </a>
+           <!-- <a href="#" class="social-icon icon-skype" title="Skype">
+            <i class="fa fa-skype"></i>
+           </a> -->
+           <a href="https://www.linkedin.com/company/pranveraapp" class="social-icon icon-linkedin" title="Linkedin">
+            <i class="fa fa-linkedin"></i>
+           </a>
+          </div><!-- End .social-icons -->
+       </div><!-- End corporate-widget -->
+      </div><!-- End .widget -->
+     </div><!-- End .col-md-3 -->
+    </div><!-- End .row -->
+   </div><!-- End .container-->
+  </div><!-- End #footer-inner -->
+ <div id="footer-bottom" class="no-bg">
+  <div class="container">
+   <div class="row">
+    <div class="col-md-6 col-md-push-6">
+     <ul class="footer-menu">
+      <li><a th:href="@{/}" th:utext="#{footer.home}"></a></li>
+      <li><a th:href="@{/work/}" th:utext="#{footer.work}"></a></li>
+      <li><a th:href="@{/services/}" th:utext="#{footer.services}"></a></li>
+      <li><a th:href="@{/news/}" th:utext="#{footer.blog}"></a></li>
+      <li><a th:href="@{/contact/}" th:utext="#{footer.contact}"></a></li>
+     </ul>
+   </div><!-- End .col-md-6 -->
+   <div class="col-md-6 col-md-pull-6">
+     <p class="copyright" >&copy; 2021 <span th:utext="#{footer.reserved}"></span>
+      <a href="http://www.pranveraapp.com">www.pranveraapp.com</a>
+     </p>
+    </div><!-- End .col-md-6 -->
+   </div><!-- End .row -->
+  </div><!-- End .container -->
+ </div><!-- End #footer-bottom -->
+</footer><!-- End #footer -->
+	

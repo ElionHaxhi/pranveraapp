@@ -24,8 +24,8 @@ public class NewsHandlerMapping extends ELAbstractHandlerMapping{
     private CategoryService categoryService;
 
 
-    @Value("${request.uri.encoding}")
-    public String charEncoding;
+//    @Value("${request.uri.encoding}")
+    public String charEncoding= "UTF-8";
 
     public static final  String CURRENT_NEWS_ATTRIBUTE_NAME = "news";
 

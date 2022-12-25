@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title layout:title-pattern="$DECORATOR_TITLE - $CONTENT_TITLE">Pranvera - App</title>
+    <th:block th:replace="/layout/partials/head"></th:block>
+</head>
+<body>
+      <div id="wrapper">
+	  <aside class="side-menu navbar-inverse left">
+	   <div class="side-menu-wrapper">
+	   
+	   <div class="header-search-form">
+	      <a class="pull-left" >
+	      <img src="../../resources/images/singlepapp.png" th:src="@{/resources/images/singlepapp.png}"/></a>
+	      <span class="header-logo">PranveraApp</span>
+	   </div>
+	     <nav th:substituteby="/layout/partials/nav"></nav>	
+	   </div>
+	  </aside>
+	  <!-- end .side-menu -->
+
+	  <div id="main-content">
+    	    <header th:substituteby="layout/partials/header"></header>
+    	  <div class="content">
+    	  <div class="page-header parallax dark larger2x larger-desc" data-bgattach="/resources/images/backgrounds/page-header.jpg" data-0="background-position:50% 0px;" data-500="background-position:50% -100%">
+                <div class="container" data-0="opacity:1;" data-top="opacity:0;">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h1 style="color:black;" th:utext="#{contact.title}">Contact Us</h1>
+                            <p class="page-header-desc" style="color:black;" th:utext="#{contact.subtext}">Hello! Use the form below to get in touch with us.</p>
+                        </div><!-- End .col-md-6 -->
+                    </div><!-- End .row -->
+                </div><!-- End .container -->
+            </div><!-- End .page-header -->
+    	   
+	   
+	     <div class="mb50"></div><!-- space -->
+	   
+	   
+    	          <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-md-9">
+                        <h2 class="title-underblock dark mb30" th:utext="#{contact.form}">Get In Touch</h2>
+                         <form method="post"  th:action="@{/contact}" th:object="${contactForm}" th:fragment="{contactForm}">
+                         
+                         <th:block th:if="${message != null}">
+        <!--/* The message code is returned from the @Controller */-->
+        		<div th:replace="layout/partials/alert :: alert (type=${#strings.toLowerCase(message.type)}, message='Fantasctic! We will be in touch soon')">&nbsp;</div>
+    			</th:block>
+                        
+                        <th:block th:if="${#fields.hasErrors('${contactForm.*}')}">
+        			<div th:replace="layout/partials/alert :: alert (type='danger', message='Form contains errors. Please try again.')" th:utext="#{contact.alert}">Alert</div>
+    			</th:block>
+                            <div class="form-group" th:classappend="${#fields.hasErrors('name')}? 'has-error'">
+                                <label for="name" class="input-desc" th:utext="#{contact.name}">Name</label>
+                                
+                                <input type="text" class="form-control input-border-bottom" id="name" th:placeholder="#{concat.ph.name}" th:field="*{name}"/>
+                                <span class="help-block" th:if="${#fields.hasErrors('name')}" th:errors="*{name}" th:utext="#{contact.nrnot}">Numer not allowed</span>
+                            
+                            </div>
+                            <!-- End .from-group-->
+                            <div class="form-group" th:classappend="${#fields.hasErrors('email')}? 'has-error'" >
+                                <label for="email" class="input-desc" th:utext="#{contact.email}">Email</label>
+                                
+                                <input type="email" id="email" th:placeholder="#{contact.ph.email}" th:field="*{email}" class="form-control input-border-bottom" />
+                                <span class="help-block" th:if="${#fields.hasErrors('email')}" th:errors="*{email}" th:utext="#{contact.enot}">Insert a valid mail</span>
+                            
+                            </div>
+                            <!--End .from-group-->
+                            <div class="form-group" th:classappend="${#fields.hasErrors('subject')}? 'has-error'">
+                                <label for="subject" class="input-desc" th:utext="#{contact.subject}">Subject</label>
+                                <input type="text" id="subject" class="form-control input-border-bottom" th:placeholder="#{contact.ph.title}" th:field="*{subject}" />
+                                <span class="help-block" th:if="${#fields.hasErrors('subject')}" th:errors="*{subject}" th:utext="#{contact.notempty}">Empty not allowed! </span>
+                            </div>
+                            <!-- End .from-group-->
+                             <div class="form-group" th:classappend="${#fields.hasErrors('text')}? 'has-error'" >
+                                <label for="text" class="input-desc" th:utext="#{contact.text}">Text</label>
+                                <textarea class="form-control input-border-bottom" rows="6" id="text" th:placeholder="#{contact.ph.text}" th:field="*{text}"></textarea>
+                                <span class="help-block" th:if="${#fields.hasErrors('text')}" th:errors="*{text}" th:utext="#{contact.notempty}">Empty not allowed! </span>
+                            </div> 
+                            <!-- End .from-group-->
+
+                            <div class="mb10"></div>
+
+                            <div class="form-group">
+                                <input type="submit" class="btn btn-dark btn-border min-width no-radius" data-loading-text="Sending..." th:value="#{contact.send}"></input>
+                            </div>
+                        </form>
+                         
+                    
+                        
+                        
+                    </div><!-- End .col-sm-8 -->
+
+                    <div class="mb40 visible-xs"></div><!-- space -->
+
+                    <div class="col-sm-4 col-md-3">
+
+<!--                        <h3 class="mb20" th:utext="#{concat.findus}">Find Us</h3>
+                        <ul class="contact-list">
+                            <li><strong th:utext="#{contact.office}">Office:</strong> Genova <br></br> 16132 - Italia</li>
+                            <li><strong>Email:</strong> <a href="mailto:info@pranveraapp.com">info@pranveraapp.com</a></li>
+                            <li><strong>Mobile:</strong> +39 320 415 0830 </li>
+                            <li><strong>Tel:</strong> +39 320 415 0830</li>
+                        </ul>
+                        <ul class="contact-list">
+                            <li><strong th:utext="#{contact.office}">Office:</strong> Albania <br></br></li>
+                            <li><strong>Email:</strong> <a href="mailto:info@pranveraapp.com">info@pranveraapp.com</a></li>
+                            <li><strong>Mobile:</strong> +39 320 415 0830 </li>
+                            <li><strong>Tel:</strong> +39 320 415 0830</li>
+                        </ul>-->
+                        
+
+                        <div class="mb20"></div><!-- space -->
+
+                        <h4 class="mb20" th:utext="#{contact.social}">Social Media</h4>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/PranveraApp" class="social-icon icon-facebook add-tooltip first" data-placement="top" title="Like us on Facebook">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a href="https://twitter.com/PranveraApp" class="social-icon icon-twitter add-tooltip" data-placement="top" title="Find us at Twitter">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a href="https://plus.google.com/u/1/114807868342730830022" class="social-icon icon-google-plus add-tooltip" data-placement="top" title="Find us at Google+">
+                                <i class="fa fa-google-plus"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/company/pranveraapp" class="social-icon icon-linkedin add-tooltip" data-placement="top" title="Find us at Linkedin">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        </div><!-- End .social-icons -->
+                        
+                    </div><!-- End .col-sm-4 -->
+                </div><!-- End .row --> 
+            </div><!-- End .container -->
+            
+
+          
+            <div class="mb40 mb20-xs"></div><!-- space -->
+    	    
+    	    
+    	    
+    
+	      <footer th:substituteby="/layout/partials/footer"></footer>
+	  </div><!-- End of content  -->
+	   </div><!-- End #main-content -->
+	   <div class="boss-menu-overlay"></div>
+	</div>
+	<!-- End #wrapper -->
+	<a href="#top" id="scroll-top" title="Back to Top"><i class="fa fa-angle-up"></i></a>
+	<!-- END -->
+	<script src="../../resources/js/smoothscroll.js" th:src="@{/resources/js/smoothscroll.js}"></script>
+	<script src="../../resources/js/bootstrap.min.js" th:src="@{/resources/js/bootstrap.min.js}"></script>
+	<script src="../../resources/js/jquery.hoverIntent.min.js" th:src="@{/resources/js/jquery.hoverIntent.min.js}"></script>
+	<script src="../../resources/js/jquery.nicescroll.min.js" th:src="@{/resources/js/jquery.nicescroll.min.js}"></script>
+	<script src="../../resources/js/waypoints.min.js" th:src="@{/resources/js/waypoints.min.js}"></script>
+	<script src="../../resources/js/waypoints-sticky.min.js" th:src="@{/resources/js/waypoints-sticky.min.js}"></script>
+	<script src="../../resources/js/jquery.debouncedresize.js" th:src="@{/resources/js/jquery.debouncedresize.js}"></script>
+	<script src="../../resources/js/retina.min.js" th:src="@{/resources/js/retina.min.js}"></script>
+	<script src="../../resources/js/owl.carousel.min.js" th:src="@{/resources/js/owl.carousel.min.js}"></script>
+	<script src="../../resources/js/skrollr.min.js" th:src="@{/resources/js/skrollr.min.js}"></script>
+	<script src="../../resources/js/jquery.countTo.js" th:src="@{/resources/js/jquery.countTo.js}"></script>
+	<script src="../../resources/js/isotope.pkgd.min.js" th:src="@{/resources/js/isotope.pkgd.min.js}"></script>
+	<script src="../../resources/js/jquery.magnific-popup.min.js" th:src="@{/resources/js/jquery.magnific-popup.min.js}"></script>
+	<script src="../../resources/js/jquery.themepunch.tools.min.js" th:src="@{/resources/js/jquery.themepunch.tools.min.js}"></script>
+	<script src="../../resources/js/jquery.themepunch.revolution.min.js" th:src="@{/resources/js/jquery.themepunch.revolution.min.js}"></script>
+	<script src="../../resources/js/wow.min.js" th:src="@{/resources/js/wow.min.js}"></script>
+	<script src="../../resources/js/jquery.validate.min.js" th:src="@{/resources/js/jquery.validate.min.js}"></script>
+	<script src="../../resources/js/main.js" th:src="@{/resources/js/main.js}"></script>
+	<script src="../../resources/js/jquery.mb.YTPlayer.js" th:src="@{/resources/js/jquery.mb.YTPlayer.js}"></script>
+	
+	 <script>
+	 <!--
+	 <![CDATA[
+    
+        /* Map */
+        (function () {
+            "use strict";
+            
+            if (document.getElementById("map")) {
+                var locations = [
+                    ['<div class="map-info-box"><ul class="contact-info-list"><li><span><i class="fa fa-home fa-fw"></i></span> Mimar Sinan Mh., Konak/İzmir, Türkiye</li><li><span><i class="fa fa-phone fa-fw"></i></span> +90 0 (232) 324 11 83</li></ul></div>', 38.396652, 27.090560, 9]
+                ];
+
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 13,
+                    center: new google.maps.LatLng(38.395592, 27.102122),
+                    scrollwheel: false,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
+                    styles: [{"featureType":"all","elementType":"all","stylers":[{"saturation":-100},{"gamma":0.5}]}]
+                });
+
+                var infowindow = new google.maps.InfoWindow();
+
+
+                var marker, i;
+
+                for (i = 0; i < locations.length; i++) {  
+                  marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                    map: map,
+                    animation: google.maps.Animation.DROP,
+                    icon: 'images/pin.png',
+                  });
+
+                  google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                    return function() {
+                      infowindow.setContent(locations[i][0]);
+                      infowindow.open(map, marker);
+                    }
+                  })(marker, i));
+                }
+            }
+
+        }());
+     ]]> -->
+    </script>
+    <!-- elion my tracking google analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+       })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-82082423-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+	
+
+
+</body>
+</html>
