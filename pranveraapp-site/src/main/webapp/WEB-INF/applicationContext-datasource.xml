@@ -14,5 +14,25 @@
 
     <jee:jndi-lookup id="webDS" jndi-name="jdbc/web"/>
 
+<!--    <beans profile="local">-->
+<!--        <bean id="configs" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" lazy-init="true">-->
+<!--            <property name="locations">-->
+<!--                <list>-->
+<!--                    <value>classpath:properties/path.local.properties</value>-->
+<!--                </list>-->
+<!--            </property>-->
+<!--        </bean>-->
+<!--    </beans>-->
+
+<!--    <beans profile="prod">-->
+<!--        <bean id="configs" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" lazy-init="true">-->
+<!--            <property name="locations">-->
+<!--                <list>-->
+<!--                    <value>classpath:properties/path.prod.properties</value>-->
+<!--                </list>-->
+<!--            </property>-->
+<!--        </bean>-->
+<!--    </beans>-->
+
 
 </beans>

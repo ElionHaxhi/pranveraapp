@@ -15,58 +15,22 @@
     <description>Questo progetto contiene tutte le classi di util</description>
 
 
-    <profiles>
-        <profile>
-            <id>local</id>
-            <properties>
-                <activeProfile>local</activeProfile>
-            </properties>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <build>
-                <pluginManagement>
-                    <plugins>
-                        <plugin>
-                            <groupId>org.apache.maven.plugins</groupId>
-                            <artifactId>maven-compiler-plugin</artifactId>
-                            <version>3.8.1</version>
-                            <configuration>
-                                <release>8</release>
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.8.1</version>
+                    <configuration>
+                        <release>8</release>
 
-                            </configuration>
-                        </plugin>
+                    </configuration>
+                </plugin>
 
-                    </plugins>
-                </pluginManagement>
-            </build>
-        </profile>
-        <profile>
-            <id>prod</id>
-            <properties>
-                <activeProfile>prod</activeProfile>
-            </properties>
-            <activation>
-                <activeByDefault>false</activeByDefault>
-            </activation>
-            <build>
-                <pluginManagement>
-                    <plugins>
-                        <plugin>
-                            <groupId>org.apache.maven.plugins</groupId>
-                            <artifactId>maven-compiler-plugin</artifactId>
-                            <version>3.8.1</version>
-                            <configuration>
-                                <release>8</release>
-
-                            </configuration>
-                        </plugin>
-
-                    </plugins>
-                </pluginManagement>
-            </build>
-        </profile>
-    </profiles>
+            </plugins>
+        </pluginManagement>
+    </build>
     <dependencies>
         <dependency>
             <groupId>org.apache.commons</groupId>

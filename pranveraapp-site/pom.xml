@@ -81,93 +81,21 @@
             </dependency>
     </dependencies>
 
-    <profiles>
-        <profile>
-            <id>local</id>
-            <properties>
-                <activeProfile>local</activeProfile>
-            </properties>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <build>
-                    <plugins>
-                        <plugin>
-                            <artifactId>maven-war-plugin</artifactId>
-                            <!-- version 2.4 -->
-                            <version>2.4</version>
-                            <configuration>
-                                <filteringDeploymentDescriptors>true</filteringDeploymentDescriptors>
-                                <webResources>
-                                    <webResource>
-                                        <directory>${basedir}/src/main/webapp/WEB-INF</directory>
-                                        <includes>
-                                            <include>web.xml</include>
-                                        </includes>
-                                        <targetPath>WEB-INF</targetPath>
-                                        <filtering>true</filtering>
-                                    </webResource>
-                                </webResources>
-                            </configuration>
-                        </plugin>
-                        <plugin>
-                            <groupId>org.apache.maven.plugins</groupId>
-                            <artifactId>maven-compiler-plugin</artifactId>
-                            <version>3.7.0</version>
-                            <configuration>
-<!--                                <release>8</release>-->
-                                <source>1.8</source>
-                                <target>1.8</target>
-                                <verbose>true</verbose>
-                            </configuration>
-                        </plugin>
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.8.1</version>
+                    <configuration>
+                        <release>8</release>
 
-                    </plugins>
-            </build>
-        </profile>
-        <profile>
-            <id>prod</id>
-            <properties>
-                <activeProfile>prod</activeProfile>
-            </properties>
-            <activation>
-                <activeByDefault>false</activeByDefault>
-            </activation>
-            <build>
-                    <plugins>
-                        <plugin>
-                            <artifactId>maven-war-plugin</artifactId>
-                            <!-- version 2.4 -->
-                            <version>2.4</version>
-                            <configuration>
-                                <filteringDeploymentDescriptors>true</filteringDeploymentDescriptors>
-                                <webResources>
-                                    <webResource>
-                                        <directory>${basedir}/src/main/webapp/WEB-INF</directory>
-                                        <includes>
-                                            <include>web.xml</include>
-                                        </includes>
-                                        <targetPath>WEB-INF</targetPath>
-                                        <filtering>true</filtering>
-                                    </webResource>
-                                </webResources>
-                            </configuration>
-                        </plugin>
-                        <plugin>
-                            <groupId>org.apache.maven.plugins</groupId>
-                            <artifactId>maven-compiler-plugin</artifactId>
-                            <version>3.7.0</version>
-                            <configuration>
-<!--                                <release>8</release>-->
-                                <source>1.8</source>
-                                <target>1.8</target>
-                                <verbose>true</verbose>
-                            </configuration>
-                        </plugin>
+                    </configuration>
+                </plugin>
 
-                    </plugins>
-            </build>
-        </profile>
-    </profiles>
+            </plugins>
+        </pluginManagement>
+    </build>
 
 </project>

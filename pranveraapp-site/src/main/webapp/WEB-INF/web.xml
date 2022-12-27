@@ -100,16 +100,10 @@
         <param-name>log4jConfigLocation</param-name>
         <param-value>/WEB-INF/log4j.xml</param-value>
     </context-param>
-    <context-param>
-        <param-name>spring.profiles.active</param-name>
-        <param-value>${activeProfile}</param-value>
-    </context-param>
-    <listener>
-        <listener-class>com.pranveraapp.site.config.ActiveProfileConfiguration</listener-class>
-    </listener>
-    <listener>
-        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-    </listener>
+
+<!--    <listener>-->
+<!--        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>-->
+<!--    </listener>-->
     <listener>
         <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
     </listener>
