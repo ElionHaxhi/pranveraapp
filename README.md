@@ -1,4 +1,9 @@
-#PranvreaApp 
+#PranvreaApp
+
+
+#### Reset password mysql
+https://dev.mysql.com/doc/mysql-windows-excerpt/5.7/en/resetting-permissions-windows.html
+
 
 ####Basic Features
 
