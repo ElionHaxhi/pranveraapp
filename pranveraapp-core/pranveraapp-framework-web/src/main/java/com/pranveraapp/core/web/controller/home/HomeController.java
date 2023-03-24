@@ -33,7 +33,7 @@ public class HomeController {
 		String visite = "Visits on http://pranveraapp.com";
 		String ipAddress = httpServletRequest.getRemoteAddr();
 
-		applicationMailerService.sendPostePerShiko(ELION_HAXHI_GMAIL_COM,visite, ipAddress);
+//		applicationMailerService.sendPostePerShiko(ELION_HAXHI_GMAIL_COM,visite, ipAddress);
 		
 		return "/layout/index";
 		
